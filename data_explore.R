@@ -6,6 +6,9 @@ library(tidyverse)
 #Importing data files
 train <- read_csv("train.csv")
 
+#A Good start
+summary(train)
+
 #Shows ratio of survival in each Pclass
 ggplot(train,aes(x=Pclass,fill=as.character(Survived)))+
   geom_bar()
