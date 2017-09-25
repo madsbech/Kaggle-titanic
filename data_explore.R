@@ -6,6 +6,7 @@ library(tidyverse)
 #Importing data files
 train <- read_csv("train.csv")
 
+
 #A Good start
 summary(train)
 
@@ -15,6 +16,7 @@ ggplot(train,aes(x=Pclass,fill=as.character(Survived)))+
 #Gender and class rates
 train %>% group_by(Pclass,Sex) %>% summarise(rate=mean(Survived),count=n())
 #Histogram of fares
+
 ggplot(train,aes(Fare))+
   geom_histogram(binwidth=5)+
   coord_cartesian(xlim=c(0,200))
