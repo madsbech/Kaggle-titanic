@@ -6,7 +6,8 @@ library(tidyverse)
 #Importing data files
 train <- read_csv("train.csv")
 
-
+#A good start
+summary(train)
 
 ggplot(train,aes(Fare))+
   geom_histogram(binwidth=5)+
